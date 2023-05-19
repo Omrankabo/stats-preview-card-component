@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --mBg : hsl(233, 47%, 7%);
+    --card-clr: hsl(244, 38%, 16%);
+    --accent:  hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --para-clr: hsla(0, 0%, 100%, 0.75);
+    --stat-clr: hsla(0, 0%, 100%, 0.6);
+    --fsize: 15px;
+    --ffa-:'Inter', sans-serif;
+    --ffb:'Lexend Deca', sans-serif;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--mBg);
+    font-size: var(--fsize);
+    color: var(--white);
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+background: var(--card-clr);
+display: flex;
+border-radius: 6px;
+
+}
+.img-container{
+    order: 2;
+    background: url(images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    max-height: 23rem ;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background: hsl(277, 64%, 61%);
+    opacity: .7;
+    filter: brightness(.8);
+    /* mix-blend-mode: color; */
+}
+
+.text-container{
+    padding: 3rem;
+    max-width: 550px;
+}
+.text-container h1{
+    font-family: var(--ffb);
+    margin-bottom: 1rem;
+}
+.text-container span{
+    color: var(--accent);
+}
+.description{
+    font-family: var(--ffa-);
+    font-weight: 400 ;
+    color: var(--para-clr);
+    margin-bottom: 3rem;
+    max-width: 400px;
+}
+.count-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+}
+
+.count h2{
+    font-family: var(--ffb);
+}
+.count p {
+    color: var(--para-clr);
+    font-family: var(--ffa-);
+}
+@media screen  and (max-width: 420px){
+   
+    .container{
+        flex-direction: column;
+        max-width: 80vw;
+        height: 90vh;
+    }
+    .img-container{
+        order: -1;
+        height: 50vh;
+    }
+    .text-container{
+        padding: 2rem 1rem;
+        max-width: 350px;
+        height: 70vh;
+        text-align: center;
+    }
+    .count-container{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bg,.img-container{
+        width: 80vw;
+    }
+    .description {
+        line-height: 25px;
+        margin-bottom: 1.5rem;
+    }
+    .count-container{
+        height: 11rem;
+    }
+  
+}
